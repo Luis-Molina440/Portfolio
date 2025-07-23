@@ -1,0 +1,282 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #F8F9FA;
+
+}
+
+a{text-decoration: none;}
+
+/* navbar*/
+.container{
+  padding: 0 20px;
+  background-color: #F8F9FA; 
+
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #F8F9FA;
+  z-index: 1000;
+  display: none; /* se muestra en pantallas grandes */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* sobre mi (about)*/
+
+.yo-pc{
+  display: none;
+}
+
+
+.image img{
+  width: 50px;     
+  height: 50px;  
+  border-radius: 50%;  
+  margin-top: 30px;
+}
+
+
+
+.iam{
+  color: #8e8b8b;
+  font-weight: 500;
+}
+
+.links{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+.links a{
+  color: #000000;
+}
+
+.links a:hover{
+  color: #747474;
+}
+
+/*proyectos*/
+
+#projects{
+  background: linear-gradient(to bottom, #cecccc, #F8F9FA, #b9b8b8);
+  padding-top: 10px;
+
+}
+
+#projects h2{
+  padding: 0;
+  margin: 30px 0 0 0;
+}
+
+.description h3{
+  padding-top: 30px;
+}
+
+.info{
+  font-weight: bold;
+}
+
+.fecha{
+  color: #4f4d4d;
+}
+
+.history{
+  font-weight: 600;
+  font-size: small;
+  color: #ff4400;
+}
+
+.history:hover{
+  color: #ff713e;
+}
+
+.image-project {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 20px;
+  padding-left: 10vw;
+  box-sizing: border-box;
+}
+
+.image-project img {
+  flex: 0 0 auto;
+  width: 80%;
+  max-width: 300px;
+  object-fit: cover;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  border-radius: 12px;
+}
+
+
+
+/*habilidades(skills)*/
+
+#skills{
+  height: 100vh;
+  background: linear-gradient(to bottom, #0f0f0f, #a5a6a7, #0f0f0f);
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-text{
+  background-color: #F8F9FA;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.tecnologias{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid none;
+  border-radius: 10px;
+  justify-content: space-around;
+  background: linear-gradient(to bottom, #0f0f0f, #a5a6a7, #4f4d4d);
+}
+
+.tecnologias img{
+  width: 40px;
+  height: 40px;
+}
+
+.tec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  
+}
+
+.tec p{
+  margin-top: 5px;
+  text-align: center;
+  font-size: small;
+}
+
+/*para pantallas grandes*/
+
+@media (min-width: 768px) {
+  /*navbar*/
+  .links {
+    display: none;
+  }
+
+  .container{
+    padding: 0 80px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 80px;
+  }
+
+  .left, .right {
+    display: flex;
+    gap: 20px;
+  }
+
+  .left a, .right a{
+    color: #0f0f0f;
+  }
+
+  .sobre-mi:hover{
+    background-color: #000000;
+    color: #F8F9FA;
+  }
+
+  .correo:hover{
+    background-color: #F8F9FA;
+    color: #000000;
+  }
+
+  .right a:hover, .left a:hover{
+    color: #929191;
+  }
+
+  .sobre-mi{
+    border: 1px solid #0f0f0f;
+    border-radius: 30px;
+    padding: 5px 8px;
+  }
+
+  .correo{
+    border: 1px solid #0f0f0f;
+    border-radius: 30px;
+    padding: 5px 8px;
+    background-color: #000000;
+    color: #F8F9FA;
+  }
+
+  /*about*/
+
+  .img-yo{
+    display: none;
+  }
+
+  #about{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iam{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+
+  }
+
+  .yo-pc{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+  }
+
+  /*proyectos*/
+  #projects{
+    padding-top: 40px;
+  }
+
+   .image-project {
+    overflow-x: visible; 
+    scroll-snap-type: none;  
+    justify-content: center; 
+  }
+
+  .image-project img {
+    width: auto; 
+    max-width: 300px; 
+    scroll-snap-align: none; 
+    scroll-snap-stop: normal; 
+  }
+
+  /*habilidades(skills)*/
+  
+  #skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill-text{
+    width: 50vh;
+  }
+ 
+}
